@@ -7,9 +7,7 @@ import com.example.Fitness.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.Instant;
-import java.time.ZoneOffset;
-import java.util.List;
+
 
 @Service
 @RequiredArgsConstructor

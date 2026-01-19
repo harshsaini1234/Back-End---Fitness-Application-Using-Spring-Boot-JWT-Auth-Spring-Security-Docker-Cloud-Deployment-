@@ -3,6 +3,7 @@ package com.example.Fitness.controller;
 import com.example.Fitness.dto.ActivityRequest;
 import com.example.Fitness.dto.ActivityResponse;
 import com.example.Fitness.modal.User;
+import com.example.Fitness.service.ActivityService;
 import com.example.Fitness.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,11 +16,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ActivityController {
 
-    private final UserService userService;
+    private final ActivityService activityService;
 
     @PostMapping("/")
    public ResponseEntity<ActivityResponse> trackActivity(@RequestBody  ActivityRequest request){
-        return " ";
+        return ResponseEntity.ok(activityService.trackActivity(request));
     }
 //    @GetMapping()
 //    public ResponseEntity<List<ActivityResponse>> trackActivity(){
