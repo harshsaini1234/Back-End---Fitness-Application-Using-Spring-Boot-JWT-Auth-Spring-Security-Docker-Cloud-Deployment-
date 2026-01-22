@@ -1,6 +1,9 @@
 package com.example.Fitness.dto;
 
 import com.example.Fitness.modal.ActivityType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,8 +17,9 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ActivityResponse {
+  
 
-    private String Id;
+    private String id;
     private String UserId;
     private ActivityType type;
     private Map<String,Object> additionalMetrics;

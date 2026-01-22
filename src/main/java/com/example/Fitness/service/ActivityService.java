@@ -22,6 +22,7 @@ public class ActivityService {
                 .orElseThrow(()-> new RuntimeException("Invalid User: "+ request.getUserId()));
         Activity activity = Activity.builder()
                 .user(user)
+
                 .type(request.getType())
                 .duration((request.getDuration()))
                 .caloriesBurned(request.getCaloriesBurned())
