@@ -23,10 +23,15 @@ public class User {
     @GeneratedValue(strategy = GenerationType.UUID)
 
     private String id;
+    @Column(unique = true)
     private String email;
     private String password;
     private String firstName;
     private String lastName;
+
+    @Enumerated(EnumType.STRING)
+    private UserRole role = UserRole.USER;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
     @UpdateTimestamp

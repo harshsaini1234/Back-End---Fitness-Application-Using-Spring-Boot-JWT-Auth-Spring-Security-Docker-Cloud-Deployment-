@@ -1,19 +1,14 @@
 package com.example.Fitness.dto;
 
-import com.example.Fitness.modal.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegisterRequest {
+public class LoginRequest {
     private String email;
     private String password;
-    private String firstName;
-    private String lastName;
-    private UserRole role;
 
 }
